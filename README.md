@@ -41,7 +41,7 @@ Yours:
              Name    Jg  Startnr  Fahrzeit
 22  Bähnemann Rik  90.0   1097.0  10:33:54
 
-Congratulations, you are in the top 32% of all finishers!
+Congratulations, you are in the top 32% of all finishers in time!
 ```
 
 # Dependencies
