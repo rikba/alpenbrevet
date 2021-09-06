@@ -62,7 +62,7 @@ if len(yours):
     print('\n')
     print('Yours: ')
     print(yours[stat_info])
-    print('\nCongratulations, you are in the top %d%% of all finishers!' % (top))
+    print('\nCongratulations, you are in the top %d%% of all finishers in time!' % (top))
 
     your_stats = '%s: %s Top: %d%%' % (yours['Name'].values[0], yours['Fahrzeit'].values[0], top)
     plt.text(yours['Fahrzeit[h]'].values[0] + 0.1, 5, your_stats, rotation=90)
