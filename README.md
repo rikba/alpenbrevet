@@ -1,5 +1,7 @@
 # alpenbrevet
-Python script to evaluate your own bike marathon time among Alpenbrevet 2021 participants
+Alpenbrevet is not a competition and thus there is no official ranking of the finishing times. 
+If you are still interested how your performance compares to the starter field, e.g., you want to know if you could compete in the Platin edition, this script gives you some information.
+The python script evaluates your own bike marathon time among Alpenbrevet 2021 participants.
 
 # How to
 Change your preferences in [stats.py](stats.py#L7-L9)
