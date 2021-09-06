@@ -5,10 +5,7 @@ The python script evaluates your own bike marathon time among Alpenbrevet 2021 p
 
 # Results
 
-<img src="result/bronze.png" alt="Bronze result" style="width:200px;"/>
-<img src="result/silber.png" alt="Silber result" style="width:200px;"/>
-<img src="result/gold.png" alt="Gold result" style="width:200px;"/>
-<img src="result/platin.png" alt="Platin result" style="width:200px;"/>
+<img src="result/bronze.png" alt="Bronze result" style="width:200px;"/><img src="result/silber.png" alt="Silber result" style="width:200px;"/><img src="result/gold.png" alt="Gold result" style="width:200px;"/><img src="result/platin.png" alt="Platin result" style="width:200px;"/>
 
 # How to rank yourself
 Change your preferences in [stats.py](stats.py#L7-L9)
