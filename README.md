@@ -15,7 +15,7 @@ python3 stats.py
 ```
 
 Example output:
-
+![Gold result](https://user-images.githubusercontent.com/11293852/132200524-9c3de646-615a-4a15-8ad9-56ff06a1c7b6.png)
 
 # Dependencies
 ```
