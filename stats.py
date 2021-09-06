@@ -33,9 +33,13 @@ if last_checkpoint not in df.columns.values:
     last_checkpoint = 'Gotthard'
 df = df.dropna(subset=[last_checkpoint])
 num_complete = len(df)
-print("Letzter Checkpoint %s (%s): %d" % (strecke, last_checkpoint, num_complete))
+print("Vor Kontrollschluss am letzten Checkpoint %s (%s): %d" % (strecke, last_checkpoint, num_complete))
 
 df['Fahrzeit[h]'] = pd.to_timedelta(df['Fahrzeit']).dt.total_seconds() / 3600
+
+df.sort_values(by=['Fahrzeit[h]'], inplace=True)
+df.reset_index(inplace=True)
+df.index += 1
 
 print('\n')
 print('Top 3: ')
@@ -63,7 +67,7 @@ if len(yours):
     print('\n')
     print('Yours: ')
     print(yours[stat_info])
-    print('\nCongratulations, you are in the top %d%% of all finishers that passed the last checkpoint (%s) in time!' % (top, last_checkpoint))
+    print('\nCongratulations, you arrived %d out of %d and in the top %d%% of all finishers that passed the last checkpoint (%s) in time!' % (yours.index[0], num_complete, top, last_checkpoint))
 
     your_stats = '%s: %s Top: %d%%' % (yours['Name'].values[0], yours['Fahrzeit'].values[0], top)
     plt.text(yours['Fahrzeit[h]'].values[0] + 0.1, 5, your_stats, rotation=90)

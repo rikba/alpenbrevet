@@ -22,26 +22,26 @@ Example output:
 Anmeldungen gold: 945
 Starter gold: 755
 Finisher gold: 749
-Letzter Checkpoint gold (Oberalp): 661
+Vor Kontrollschluss am letzten Checkpoint gold (Oberalp): 661
 
 
 Top 3: 
-                      Name    Jg  Startnr Fahrzeit
-446       Paaske Roar Lava  86.0   2780.0  7:51:37
-515  Schaufelberger Markus  78.0   3069.0  7:57:35
-639         Van Rijt Geert  87.0   3580.0  8:05:55
+                    Name    Jg  Startnr Fahrzeit
+1       Paaske Roar Lava  86.0   2780.0  7:51:37
+2  Schaufelberger Markus  78.0   3069.0  7:57:35
+3         Van Rijt Geert  87.0   3580.0  8:05:55
 
 
 Lantern Rouge: 
-              Name    Jg  Startnr  Fahrzeit
-72  Brunold Debora  94.0   1334.0  14:23:12
+               Name    Jg  Startnr  Fahrzeit
+661  Brunold Debora  94.0   1334.0  14:23:12
 
 
 Yours: 
-             Name    Jg  Startnr  Fahrzeit
-22  Bähnemann Rik  90.0   1097.0  10:33:54
+              Name    Jg  Startnr  Fahrzeit
+216  Bähnemann Rik  90.0   1097.0  10:33:54
 
-Congratulations, you are in the top 33% of all finishers that passed the last checkpoint (Oberalp) in time!
+Congratulations, you arrived 216 out of 661 and in the top 33% of all finishers that passed the last checkpoint (Oberalp) in time!
 ```
 
 # Dependencies
