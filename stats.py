@@ -1,6 +1,7 @@
 import tabula
 import pandas as pd
 import matplotlib.pyplot as plt
+import math
 
 plt.close("all")
 
@@ -45,10 +46,10 @@ print('Lantern Rouge: ')
 print(df.nlargest(1, 'Fahrzeit[h]')[stat_info])
 
 plt.figure()
-plt.title('Finisher Zeiten Strecke: %s' % (strecke))
+plt.title('Alpenbrevet 2021 Fahrzeiten (%s)' % (strecke))
 
 # Approx. every 20 min one bin.
-num_bins = int((df['Fahrzeit[h]'].max() - df['Fahrzeit[h]'].min()) * 3) + 1
+num_bins = int(math.ceil((df['Fahrzeit[h]'].max() - df['Fahrzeit[h]'].min()) * 3))
 ax = df['Fahrzeit[h]'].plot.hist(bins=num_bins)
 ax.set_xlabel('Fahrzeit [h]')
 ax.set_ylabel('Anzahl Finisher')
@@ -58,11 +59,11 @@ yours = df[df['Startnr'] == start_nr]
 if len(yours):
     plt.axvline(yours['Fahrzeit[h]'].values[0], color='k', linestyle='dashed', linewidth=1)
 
-    top = len(df[df['Fahrzeit[h]'] <= yours['Fahrzeit[h]'].values[0]]) / num_complete * 100
+    top = math.ceil(len(df[df['Fahrzeit[h]'] <= yours['Fahrzeit[h]'].values[0]]) / num_complete * 100)
     print('\n')
     print('Yours: ')
     print(yours[stat_info])
-    print('\nCongratulations, you are in the top %d%% of all finishers in time!' % (top))
+    print('\nCongratulations, you are in the top %d%% of all finishers that passed the last checkpoint (%s) in time!' % (top, last_checkpoint))
 
     your_stats = '%s: %s Top: %d%%' % (yours['Name'].values[0], yours['Fahrzeit'].values[0], top)
     plt.text(yours['Fahrzeit[h]'].values[0] + 0.1, 5, your_stats, rotation=90)

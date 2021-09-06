@@ -41,10 +41,10 @@ Yours:
              Name    Jg  Startnr  Fahrzeit
 22  Bähnemann Rik  90.0   1097.0  10:33:54
 
-Congratulations, you are in the top 32% of all finishers in time!
+Congratulations, you are in the top 33% of all finishers that passed the last checkpoint (Oberalp) in time!
 ```
 
 # Dependencies
 ```
-pip3 install tabula pandas matplotlib
+pip3 install tabula pandas matplotlib math
 ```
