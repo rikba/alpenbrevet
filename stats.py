@@ -7,7 +7,7 @@ plt.close("all")
 
 # Set your preferences here.
 strecke = 'gold'
-start_nr = 1097
+start_nr = 3752
 
 file = './data/%s.pdf' % (strecke)
 stat_info = ['Name', 'Jg', 'Startnr', 'Fahrzeit']
@@ -19,16 +19,24 @@ for i in range(1, len(table)):
     df = pd.concat([df, table[i]], ignore_index=True)
 
 df = df[df['Name'] != 'Ziel']
+df = df[df['Name'] != 'Preview']
+df = df[df['Name'] != 'Ulrichen']
+df = df[df['Name'] != 'Airolo']
+df = df[df['Name'] != 'Olivone']
+df = df[df['Name'] != 'Disentis']
+df = df[df['Name'] != 'Start']
 num_total = len(df)
 print("Anmeldungen %s: %d" % (strecke, num_total))
 df = df[df['Fahrzeit'] != 'DNS']
 num_starter = len(df)
 print("Starter %s: %d" % (strecke, num_starter))
 df = df[df['Fahrzeit'] != 'DNF']
+df = df[df['Fahrzeit'] != '-']
+df = df[df['Fahrzeit'] != '00:00']
 num_finisher = len(df)
 print("Finisher %s: %d" % (strecke, num_finisher))
 
-last_checkpoint = 'Oberalp'
+last_checkpoint = 'Furka'
 if last_checkpoint not in df.columns.values:
     last_checkpoint = 'Gotthard'
 df = df.dropna(subset=[last_checkpoint])
@@ -50,7 +58,7 @@ print('Lantern Rouge: ')
 print(df.nlargest(1, 'Fahrzeit[h]')[stat_info])
 
 plt.figure()
-plt.title('Alpenbrevet 2021 Fahrzeiten (%s)' % (strecke))
+plt.title('Alpenbrevet 2023 Fahrzeiten (%s)' % (strecke))
 
 # Approx. every 20 min one bin.
 num_bins = int(math.ceil((df['Fahrzeit[h]'].max() - df['Fahrzeit[h]'].min()) * 3))
